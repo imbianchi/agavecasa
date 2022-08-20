@@ -1,5 +1,7 @@
 /* SASS and Global'ish Stuff */
 @use "./mixin.scss";
 
+@import "~normalize.css/normalize.css";
+
 /* BEM Blocks */
 @import "./modules/search-overlay.scss";

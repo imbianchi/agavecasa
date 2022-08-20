@@ -1,9 +1,16 @@
 <?php
 
+// require get_theme_file_path('/inc/search-route.php');
+
 function agavecasa_files()
 {
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-    ?><script id="agavecasa-js" src="<?php echo get_stylesheet_directory_uri() . '/src/index.js'?>"></script><?php
+    wp_enqueue_script('main-agavecasa-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
+    wp_enqueue_style('agavecasa_extra_styles', get_theme_file_uri('/build/style.css'));
+
+    wp_localize_script('agavecasa-js', 'agaveCasaData', array(
+        'root_url' => get_site_url()
+    ));
 }
 
 add_action('wp_head', 'agavecasa_files');
@@ -62,8 +69,6 @@ function wdequeue_react_scripts_styles()
         wp_enqueue_style('react-css', get_stylesheet_directory_uri() . '/assets/css/react.css', array(), filemtime(get_stylesheet_directory_uri() . '/assets/css/react.css'), false);
     }
 }
-
-
 
 
 function woocommerce_button_proceed_to_checkout()
