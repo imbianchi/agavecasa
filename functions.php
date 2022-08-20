@@ -73,3 +73,6 @@ function woocommerce_button_proceed_to_checkout()
     </a>
 <?php
 }
+
+
+define('WP_SCSS_ALWAYS_RECOMPILE', true);

@@ -1,5 +1,5 @@
 /* SASS and Global'ish Stuff */
-@import "base/baselines.scss";
+@use "./mixin.scss";
 
 /* BEM Blocks */
-@import "modules/search-overlay.scss";
+@import "./modules/search-overlay.scss";

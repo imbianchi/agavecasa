@@ -1,3 +1,5 @@
+@use "../mixin.scss";
+
 .search-overlay {
     overflow-y: auto;
     overflow-x: hidden;
@@ -38,7 +40,7 @@
     &__icon {
       margin-right: 10px;
       font-size: 1.8rem;
-      @include atMedium {
+      @include mixin.atMedium {
         font-size: 2.5rem;
       }
     }
@@ -66,11 +68,11 @@
       transition: all 0.3s;
       background-color: #fff;
       line-height: 0.7;
-      @include atSmall {
+      @include mixin.atSmall {
         top: 18px;
         font-size: 2.1rem;
       }
-      @include atMedium {
+      @include mixin.atMedium {
         top: 26px;
         font-size: 2.8rem;
       }
@@ -95,10 +97,10 @@
     font-size: 1rem;
     font-weight: 300;
     outline: none;
-    @include atSmall {
+    @include mixin.atSmall {
       font-size: 1.5rem;
     }
-    @include atMedium {
+    @include mixin.atMedium {
       width: 80%;
       font-size: 3rem;
     }
