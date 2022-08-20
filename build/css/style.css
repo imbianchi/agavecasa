@@ -1,4 +1,5 @@
 /* SASS and Global'ish Stuff */
+@import "~normalize.css/normalize.css";
 /* BEM Blocks */
 .search-overlay {
   overflow-y: auto;
