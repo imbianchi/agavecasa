@@ -1,6 +1,6 @@
 <?php
 
-// require get_theme_file_path('/inc/search-route.php');
+require get_theme_file_path('/inc/search-route.php');
 
 function agavecasa_files()
 {
@@ -8,19 +8,14 @@ function agavecasa_files()
     wp_enqueue_script('main-agavecasa-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_enqueue_style('agavecasa_extra_styles', get_theme_file_uri('/build/style.css'));
 
-    wp_localize_script('agavecasa-js', 'agaveCasaData', array(
-        'root_url' => get_site_url()
-    ));
+    wp_localize_script('main-agavecasa-js', 'agaveCasaData', array(
+        'root_url' => get_site_url(),
+        'nonce' => wp_create_nonce('wp_rest')
+      ));
+    
 }
 
 add_action('wp_head', 'agavecasa_files');
-
-# [SEARCH OVERLAY]
-function insertSearchOverlayIntoHTML()
-{
-    include 'src/modules/search/search-overlay.php';
-}
-add_shortcode('search-overlay', 'insertSearchOverlayIntoHTML');
 
 // Add custom shortcode
 # [list-corporativo]
