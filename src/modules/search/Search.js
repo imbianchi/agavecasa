@@ -57,7 +57,14 @@ class Search {
             ${results.generalInfo.length ? '<ul class="link-list min-list">' : "<p>Nenhum resultado foi encontrado. Tente novamente com outro termo.</p>"}
               ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == "post" ? `by ${item.authorName}` : ""}</li>`).join("")}
             ${results.generalInfo.length ? "</ul>" : ""}
-          </div>          
+          </div>
+          
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">Produtos</h2>
+            ${results.products.length ? '<ul class="link-list min-list">' : `<p>Nenhum produto encotrado. <a href="${agaveCasaData.root_url}/loja">Ver todos produtos.</a></p>`}
+              ${results.products.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join("")}
+            ${results.products.length ? "</ul>" : ""}
+          </div>
         </div>
       `
       this.isSpinnerVisible = false
