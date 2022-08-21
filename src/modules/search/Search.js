@@ -61,7 +61,7 @@ class Search {
           
           <div class="one-third">
             <h2 class="search-overlay__section-title">Produtos</h2>
-            ${results.products.length ? '<ul class="link-list min-list">' : `<p>Nenhum produto encotrado. <a href="${agaveCasaData.root_url}/loja">Ver todos produtos.</a></p>`}
+            ${results.products.length ? '<ul class="link-list min-list">' : `<p>Nenhum produto encontrado. <a href="${agaveCasaData.root_url}/loja">Ver todos produtos.</a></p>`}
               ${results.products.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join("")}
             ${results.products.length ? "</ul>" : ""}
           </div>
@@ -104,7 +104,7 @@ class Search {
       `
       <div class="search-overlay">
         <div class="search-overlay__top">
-          <div class="container">
+          <div class="container container-overlay">
             <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
             <input type="text" class="search-term" placeholder="Digite o termo de busca..." id="search-term">
             <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>

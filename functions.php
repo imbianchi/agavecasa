@@ -15,7 +15,7 @@ function agavecasa_files()
     
 }
 
-add_action('wp_head', 'agavecasa_files');
+add_action('wp_enqueue_scripts', 'agavecasa_files', 99);
 
 // Add custom shortcode
 # [list-corporativo]

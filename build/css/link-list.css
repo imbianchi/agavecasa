@@ -1,7 +1,17 @@
+.min-list {
+  padding: 0;
+  margin: 0;
+}
+
+.min-list li {
+  list-style: none;
+}
+
 .link-list li {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   font-size: 1.5rem;
   border-bottom: 1px dotted #DEDEDE;
+  margin-bottom: 0;
 }
 .search-overlay .link-list li {
   font-size: 1.3rem;
@@ -10,5 +20,5 @@
   border-bottom: none;
 }
 .link-list a {
-  color: red;
+  color: black;
 }/*# sourceMappingURL=link-list.css.map */

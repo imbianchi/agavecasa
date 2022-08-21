@@ -20,13 +20,6 @@
 .search-overlay p {
   padding-top: 15px;
 }
-.search-overlay .event-summary p {
-  padding-top: 0;
-}
-.search-overlay .event-summary {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
 body.admin-bar .search-overlay {
   top: 32px;
 }
@@ -34,8 +27,9 @@ body.admin-bar .search-overlay {
   background-color: rgba(0, 0, 0, 0.12);
 }
 .search-overlay__icon {
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 1.8rem;
+  color: black;
 }
 @media (min-width: 960px) {
   .search-overlay__icon {
@@ -49,10 +43,13 @@ body.admin-bar .search-overlay {
 }
 .search-overlay__section-title {
   margin: 30px 0 1px 0;
+  text-transform: uppercase;
   font-weight: 400;
-  font-size: 2rem;
+  color: black;
+  font-size: 2.2rem;
   padding: 15px 0;
   border-bottom: 1px solid #ccc;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .search-overlay__close {
   position: absolute;
@@ -62,6 +59,7 @@ body.admin-bar .search-overlay {
   cursor: pointer;
   transition: all 0.3s;
   background-color: #fff;
+  color: tomato;
   line-height: 0.7;
 }
 @media (min-width: 530px) {
@@ -83,7 +81,12 @@ body.admin-bar .search-overlay {
   padding-bottom: 0;
 }
 
-.search-term {
+.container-overlay {
+  display: flex;
+  align-items: center;
+}
+
+#search-term {
   width: 75%;
   box-sizing: border-box;
   border: none;
@@ -93,19 +96,113 @@ body.admin-bar .search-overlay {
   font-size: 1rem;
   font-weight: 300;
   outline: none;
+  color: gray;
+  box-shadow: none;
 }
 @media (min-width: 530px) {
-  .search-term {
+  #search-term {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 960px) {
-  .search-term {
+  #search-term {
     width: 80%;
     font-size: 3rem;
   }
 }
 
 .body-no-scroll {
-  overflow: hidden;
+  overflow: hidden !important;
+}
+
+.min-list {
+  padding: 0;
+  margin: 0;
+}
+
+.min-list li {
+  list-style: none;
+}
+
+.link-list li {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  border-bottom: 1px dotted #DEDEDE;
+  margin-bottom: 0;
+}
+.search-overlay .link-list li {
+  font-size: 1.3rem;
+}
+.link-list li:last-child {
+  border-bottom: none;
+}
+.link-list a {
+  color: black;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-loader {
+  margin-top: 45px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: black;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+.c-orange {
+  color: orange;
+}
+
+.c-blue {
+  color: blue;
+}
+
+.c-white {
+  color: #fff;
+}
+
+.c-dark {
+  color: #333;
+}
+
+.gray {
+  color: #999999;
+}
+
+.search-trigger {
+  display: none;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  top: 1px;
+  margin-left: 20px;
+}
+@media (min-width: 960px) {
+  .search-trigger {
+    display: inline-block;
+    top: 6px;
+  }
+}
+
+.search-trigger:hover {
+  opacity: 0.65;
 }/*# sourceMappingURL=style.css.map */
