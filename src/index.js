@@ -131,4 +131,5 @@ jQuery(document).ready(function ($) {
       }
 
       const search = new Search(axios)
+
 });
