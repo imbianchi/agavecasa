@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-jQuery(document).ready(function ($) {
-    "use strict";
+const $j=jQuery.noConflict();
 
+$j(document).ready(function ($) {
     console.log('DOCUMENT READY JQUERY - [LOG 1]')
 
     class Search {
