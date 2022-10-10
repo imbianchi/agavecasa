@@ -3,6 +3,8 @@ import axios from 'axios';
 jQuery(document).ready(function ($) {
     "use strict";
 
+    console.log('DOCUMENT READY JQUERY - [LOG 1]')
+
     class Search {
         constructor(axios) {
           this.addSearchHTML()
@@ -129,5 +131,4 @@ jQuery(document).ready(function ($) {
       }
 
       const search = new Search(axios)
-
 });
