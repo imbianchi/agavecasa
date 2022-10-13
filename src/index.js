@@ -49,14 +49,8 @@ class Search {
 
   async getResults() {
 
-    if(!agaveCasaData) {
-      agaveCasaData = {
-        root_url: "TESTEURL",
-      }
-    }
-
     try {
-      const response = await axios.get(agaveCasaData.root_url + "/index.php/wp-json/agavecasa/v1/search?term=" + this.searchField.value)
+      const response = await axios.get("https://agavecasa.com.br/index.php/wp-json/agavecasa/v1/search?term=" + this.searchField.value)
       const results = response.data
       this.resultsDiv.innerHTML = `
               <div class="row">
@@ -69,7 +63,7 @@ class Search {
                 
                 <div class="one-third">
                   <h2 class="search-overlay__section-title">Produtos</h2>
-                  ${results.products.length ? '<ul class="link-list min-list">' : `<p>Nenhum produto encontrado. <a href="${agaveCasaData.root_url}/loja">Ver todos produtos.</a></p>`}
+                  ${results.products.length ? '<ul class="link-list min-list">' : `<p>Nenhum produto encontrado. <a href="https://agavecasa.com.br/loja">Ver todos produtos.</a></p>`}
                     ${results.products.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join("")}
                   ${results.products.length ? "</ul>" : ""}
                 </div>
