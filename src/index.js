@@ -48,7 +48,13 @@ class Search {
   }
 
   async getResults() {
-    console.log('TESTE AXIOS')
+
+    if(!agaveCasaData) {
+      agaveCasaData = {
+        root_url: "TESTEURL",
+      }
+    }
+
     try {
       const response = await axios.get(agaveCasaData.root_url + "/index.php/wp-json/agavecasa/v1/search?term=" + this.searchField.value)
       const results = response.data
