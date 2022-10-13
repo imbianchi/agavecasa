@@ -18,8 +18,6 @@ class Search {
 
   events() {
     this.openButton.forEach(el => {
-      alert('FOI?')
-      console.log('CLICK EVENT - [ELEMENT]', el)
       el.addEventListener("click", e => {
         e.preventDefault()
         this.openOverlay()
@@ -88,7 +86,6 @@ class Search {
   }
 
   openOverlay() {
-    console.log('OPEN OVERLAY AFTER CLICK EVENT - [THIS OVERLAY ELEMENT]', this.searchOverlay)
     this.searchOverlay.classList.add("search-overlay--active")
     document.body.classList.add("body-no-scroll")
     this.searchField.value = ""
