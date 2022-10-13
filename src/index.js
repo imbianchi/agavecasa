@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const $j=jQuery.noConflict();
+var j=jQuery.noConflict();
 
-$j(document).ready(function ($) {
+j(document).ready(function ($) {
     console.log('DOCUMENT READY JQUERY - [LOG 1]')
 
     class Search {
@@ -23,6 +23,7 @@ $j(document).ready(function ($) {
       
         events() {
           this.openButton.forEach(el => {
+            alert('FOI?')
             console.log('CLICK EVENT - [ELEMENT]', el)
             el.addEventListener("click", e => {
               e.preventDefault()
