@@ -13,7 +13,6 @@ class Search {
     this.previousValue
     this.typingTimer
     this.events()
-    this.axios = axios
   }
 
   events() {
@@ -49,8 +48,9 @@ class Search {
   }
 
   async getResults() {
+    console.log('TESTE AXIOS')
     try {
-      const response = await this.axios.get(agaveCasaData.root_url + "/index.php/wp-json/agavecasa/v1/search?term=" + this.searchField.value)
+      const response = await axios.get(agaveCasaData.root_url + "/index.php/wp-json/agavecasa/v1/search?term=" + this.searchField.value)
       const results = response.data
       this.resultsDiv.innerHTML = `
               <div class="row">
