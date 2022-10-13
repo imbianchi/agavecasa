@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 class Search {
-  constructor(axios) {
+  constructor() {
     this.addSearchHTML()
     this.resultsDiv = document.querySelector("#search-overlay__results")
     this.openButton = document.querySelectorAll(".js-search-trigger")
